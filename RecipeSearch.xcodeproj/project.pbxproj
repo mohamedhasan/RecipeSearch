@@ -61,6 +61,12 @@
 		5C092A5F23805EF4004C94C7 /* EdamamRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A5E23805EF4004C94C7 /* EdamamRecipe.swift */; };
 		5C092A6023805EF4004C94C7 /* EdamamRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A5E23805EF4004C94C7 /* EdamamRecipe.swift */; };
 		5C092A6123805EF4004C94C7 /* EdamamRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A5E23805EF4004C94C7 /* EdamamRecipe.swift */; };
+		5C092A63238086E7004C94C7 /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A62238086E7004C94C7 /* RecipesPresenter.swift */; };
+		5C092A64238086E7004C94C7 /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A62238086E7004C94C7 /* RecipesPresenter.swift */; };
+		5C092A65238086E7004C94C7 /* RecipesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A62238086E7004C94C7 /* RecipesPresenter.swift */; };
+		5C092A67238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
+		5C092A68238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
+		5C092A69238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +116,8 @@
 		5C092A4E238046C1004C94C7 /* RecipeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeProtocol.swift; sourceTree = "<group>"; };
 		5C092A5A23805E3B004C94C7 /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		5C092A5E23805EF4004C94C7 /* EdamamRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdamamRecipe.swift; sourceTree = "<group>"; };
+		5C092A62238086E7004C94C7 /* RecipesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPresenter.swift; sourceTree = "<group>"; };
+		5C092A66238086F8004C94C7 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +263,7 @@
 		5C0929FD238041D2004C94C7 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				5C092A66238086F8004C94C7 /* RecipesInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 		5C092A03238041D2004C94C7 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				5C092A62238086E7004C94C7 /* RecipesPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -496,6 +506,7 @@
 				5C092A07238041D2004C94C7 /* EdamamRequest.swift in Sources */,
 				5C092903238016EA004C94C7 /* SearchViewController.swift in Sources */,
 				5C092A4A238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
+				5C092A63238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A2A23804246004C94C7 /* JsonParser.swift in Sources */,
 				5C0928FF238016EA004C94C7 /* AppDelegate.swift in Sources */,
 				5C092A5B23805E3B004C94C7 /* ResponseProtocol.swift in Sources */,
@@ -505,6 +516,7 @@
 				5C092A5F23805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
 				5C092901238016EA004C94C7 /* SceneDelegate.swift in Sources */,
 				5C092A0A238041D2004C94C7 /* RequestProtocol.swift in Sources */,
+				5C092A67238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A3023804246004C94C7 /* NetworkError.swift in Sources */,
 				5C092A53238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
 			);
@@ -522,10 +534,12 @@
 				5C092A51238046C1004C94C7 /* EdamamSearchResponse.swift in Sources */,
 				5C092A6023805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
 				5C092A08238041D2004C94C7 /* EdamamRequest.swift in Sources */,
+				5C092A68238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A35238042A3004C94C7 /* NetworkMockingManager.swift in Sources */,
 				5C092A2823804246004C94C7 /* DataProviderProtocol.swift in Sources */,
 				5C092A54238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
 				5C092A4B238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
+				5C092A64238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A5C23805E3B004C94C7 /* ResponseProtocol.swift in Sources */,
 				5C092916238016EC004C94C7 /* RecipeSearchTests.swift in Sources */,
 			);
@@ -536,9 +550,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C092A22238041E9004C94C7 /* UIViewController+ErrorHandling.swift in Sources */,
+				5C092A69238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A3223804246004C94C7 /* NetworkError.swift in Sources */,
 				5C092A4C238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
 				5C092A0C238041D2004C94C7 /* RequestProtocol.swift in Sources */,
+				5C092A65238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A2C23804246004C94C7 /* JsonParser.swift in Sources */,
 				5C092A6123805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
 				5C092A2F23804246004C94C7 /* NetworkManager.swift in Sources */,

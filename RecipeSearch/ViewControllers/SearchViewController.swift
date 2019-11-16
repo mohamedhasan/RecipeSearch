@@ -8,13 +8,30 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+protocol RecipeDisplayProtocol: class {
+    func showRecipes(_ recipes: [RecipeProtocol])
+    func presentError(_ error:NetworkError)
+}
 
+class SearchViewController: UIViewController, RecipeDisplayProtocol {
+    
+    private let interactor = RecipesInteractor(dataProvider: NetworkManager.sharedInstance)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        setup()
+        interactor.searchRecipes(query: "pizza")
     }
 
+    func setup() {
+        navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
+        let presenter = RecipesPresenter()
+        presenter.viewController = self
+        interactor.presenter = presenter
+    }
 
+    func showRecipes(_ recipes: [RecipeProtocol]) {
+        
+    }
 }
 

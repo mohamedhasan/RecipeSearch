@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="t2c-Ra-jYg">
+                                <rect key="frame" x="130" y="310.5" width="154" height="28"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodIcon" translatesAutoresizingMaskIntoConstraints="NO" id="skP-WB-T3R">
+                                <rect key="frame" x="110.5" y="353.5" width="193" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="7Kj-g0-yb4"/>
+                                    <constraint firstAttribute="height" constant="199" id="vq8-dP-k6L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.74515732020547942" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="t2c-Ra-jYg" firstAttribute="centerX" secondItem="skP-WB-T3R" secondAttribute="centerX" id="Jj0-wH-r3W"/>
+                            <constraint firstItem="skP-WB-T3R" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TgL-Wt-1dZ"/>
+                            <constraint firstItem="skP-WB-T3R" firstAttribute="top" secondItem="t2c-Ra-jYg" secondAttribute="bottom" constant="15" id="a1b-qv-qBE"/>
+                            <constraint firstItem="skP-WB-T3R" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mdp-8I-gAq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="foodIcon" width="256" height="256"/>
+        <image name="logo" width="154" height="28"/>
+    </resources>
+</document>

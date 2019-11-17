@@ -67,6 +67,18 @@
 		5C092A67238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
 		5C092A68238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
 		5C092A69238086F8004C94C7 /* RecipesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A66238086F8004C94C7 /* RecipesInteractor.swift */; };
+		5C092A6D2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */; };
+		5C092A6E2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */; };
+		5C092A6F2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */; };
+		5C092A702380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */; };
+		5C092A712380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */; };
+		5C092A722380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */; };
+		5C092A742380A938004C94C7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C092A732380A938004C94C7 /* SDWebImage.framework */; };
+		5C092A752380A942004C94C7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C092A732380A938004C94C7 /* SDWebImage.framework */; };
+		5C092A762380A948004C94C7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C092A732380A938004C94C7 /* SDWebImage.framework */; };
+		5C092A782380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
+		5C092A792380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
+		5C092A7A2380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +130,10 @@
 		5C092A5E23805EF4004C94C7 /* EdamamRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdamamRecipe.swift; sourceTree = "<group>"; };
 		5C092A62238086E7004C94C7 /* RecipesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesPresenter.swift; sourceTree = "<group>"; };
 		5C092A66238086F8004C94C7 /* RecipesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesInteractor.swift; sourceTree = "<group>"; };
+		5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		5C092A732380A938004C94C7 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C0929AA23802412004C94C7 /* Alamofire.framework in Frameworks */,
+				5C092A742380A938004C94C7 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C092A3A238043BA004C94C7 /* Alamofire.framework in Frameworks */,
+				5C092A752380A942004C94C7 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C092A3B238043DC004C94C7 /* Alamofire.framework in Frameworks */,
+				5C092A762380A948004C94C7 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				5C092A1F238041E9004C94C7 /* UIViewController+ErrorHandling.swift */,
+				5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */,
 				5C092902238016EA004C94C7 /* SearchViewController.swift */,
+				5C092A6A2380A248004C94C7 /* Cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +237,7 @@
 		5C0929A823802412004C94C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C092A732380A938004C94C7 /* SDWebImage.framework */,
 				5C092A3723804328004C94C7 /* Alamofire.framework.dSYM */,
 				5C0929A923802412004C94C7 /* Alamofire.framework */,
 			);
@@ -303,6 +325,15 @@
 				5C092A5A23805E3B004C94C7 /* ResponseProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5C092A6A2380A248004C94C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */,
+				5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +446,7 @@
 				5C092A40238045C8004C94C7 /* LaunchScreen.storyboard in Resources */,
 				5C092A46238045C8004C94C7 /* Assets.xcassets in Resources */,
 				5C092A43238045C8004C94C7 /* Main.storyboard in Resources */,
+				5C092A702380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +457,7 @@
 				5C092A41238045C8004C94C7 /* LaunchScreen.storyboard in Resources */,
 				5C092A47238045C8004C94C7 /* Assets.xcassets in Resources */,
 				5C092A44238045C8004C94C7 /* Main.storyboard in Resources */,
+				5C092A712380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +468,7 @@
 				5C092A42238045C8004C94C7 /* LaunchScreen.storyboard in Resources */,
 				5C092A48238045C8004C94C7 /* Assets.xcassets in Resources */,
 				5C092A45238045C8004C94C7 /* Main.storyboard in Resources */,
+				5C092A722380A25D004C94C7 /* RecipeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +484,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -468,6 +503,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -486,6 +522,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -505,6 +542,7 @@
 				5C092A2D23804246004C94C7 /* NetworkManager.swift in Sources */,
 				5C092A07238041D2004C94C7 /* EdamamRequest.swift in Sources */,
 				5C092903238016EA004C94C7 /* SearchViewController.swift in Sources */,
+				5C092A6D2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */,
 				5C092A4A238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
 				5C092A63238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A2A23804246004C94C7 /* JsonParser.swift in Sources */,
@@ -514,6 +552,7 @@
 				5C092A2723804246004C94C7 /* DataProviderProtocol.swift in Sources */,
 				5C092A20238041E9004C94C7 /* UIViewController+ErrorHandling.swift in Sources */,
 				5C092A5F23805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
+				5C092A782380AC34004C94C7 /* UIViewController+Loading.swift in Sources */,
 				5C092901238016EA004C94C7 /* SceneDelegate.swift in Sources */,
 				5C092A0A238041D2004C94C7 /* RequestProtocol.swift in Sources */,
 				5C092A67238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
@@ -533,6 +572,7 @@
 				5C092A2E23804246004C94C7 /* NetworkManager.swift in Sources */,
 				5C092A51238046C1004C94C7 /* EdamamSearchResponse.swift in Sources */,
 				5C092A6023805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
+				5C092A792380AC34004C94C7 /* UIViewController+Loading.swift in Sources */,
 				5C092A08238041D2004C94C7 /* EdamamRequest.swift in Sources */,
 				5C092A68238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A35238042A3004C94C7 /* NetworkMockingManager.swift in Sources */,
@@ -541,6 +581,7 @@
 				5C092A4B238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
 				5C092A64238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A5C23805E3B004C94C7 /* ResponseProtocol.swift in Sources */,
+				5C092A6E2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */,
 				5C092916238016EC004C94C7 /* RecipeSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +594,7 @@
 				5C092A69238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A3223804246004C94C7 /* NetworkError.swift in Sources */,
 				5C092A4C238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
+				5C092A7A2380AC34004C94C7 /* UIViewController+Loading.swift in Sources */,
 				5C092A0C238041D2004C94C7 /* RequestProtocol.swift in Sources */,
 				5C092A65238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A2C23804246004C94C7 /* JsonParser.swift in Sources */,
@@ -564,6 +606,7 @@
 				5C092A2923804246004C94C7 /* DataProviderProtocol.swift in Sources */,
 				5C092A55238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
 				5C092921238016EC004C94C7 /* RecipeSearchUITests.swift in Sources */,
+				5C092A6F2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

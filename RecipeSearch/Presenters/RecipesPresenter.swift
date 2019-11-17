@@ -20,14 +20,22 @@ class RecipesPresenter: NSObject, RecipesPresentationProtocol {
     weak var viewController: RecipeDisplayProtocol?
     
     func presentRecipes(_ recipes: [RecipeProtocol]) {
-        viewController?.showRecipes(recipes)
+        if recipes.count > 0 {
+            viewController?.showRecipes(recipes)
+        } else {
+            viewController?.showError(.custom(NSLocalizedString("No Recipes Found", comment: "")))
+        }
     }
-    
+
     func loadMoreRecipes(_ recipes: [RecipeProtocol]) {
-        
+        if recipes.count > 0 {
+            viewController?.showRecipes(recipes)
+        } else {
+            viewController?.showError(.custom(NSLocalizedString("No More Recipes to Show", comment: "")))
+        }
     }
     
     func presentError(_ error: NetworkError) {
-        self.viewController?.presentError(error)
+        self.viewController?.showError(error)
     }
 }

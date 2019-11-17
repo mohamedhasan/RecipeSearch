@@ -56,4 +56,10 @@ class EdamamRequest: BaseRequest {
     class func searchRecipesRequest(query:String) -> EdamamRequest {
         return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q":query])
     }
+    
+    class func searchRecipesRequest(query:String, page: Int, size: Int) -> EdamamRequest {
+        let from = page * size
+        let to = min((page + 1) * size, 95)
+        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q": query,"from": from, "to": to])
+    }
 }

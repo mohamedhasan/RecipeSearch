@@ -12,5 +12,8 @@ protocol ResponseProtocol {
     var data: [RecipeProtocol] { get }
     var error: String? { get }
     var isSuccess: Bool { get }
+    var hasMore: Bool { get }
     var currentPage: Int { get }
+    var pageSize: Int { get }
+    var totalPages: Int { get }
 }

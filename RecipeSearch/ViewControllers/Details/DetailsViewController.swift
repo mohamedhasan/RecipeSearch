@@ -21,6 +21,10 @@ class DetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard recipe != nil else {
+            view.alpha = 0
+            return
+        }
         setup()
     }
 

@@ -49,7 +49,8 @@ extension EdamamResult: RecipeProtocol {
         return recipe.source
     }
     
+//    EdamamRecipe doesn't support social Counts for now will return (Zero)
     var socialRank: Int {
-        return recipe.yield
+        return 0
     }
 }

@@ -26,9 +26,15 @@ class SearchViewController: UIViewController, RecipeDisplayProtocol {
         setup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let selectedIndex = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndex, animated: true)
+        }
+    }
+    
     func setup() {
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
-        tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "RecipeTableViewCell")
         let presenter = RecipesPresenter()
         presenter.viewController = self
         interactor.presenter = presenter
@@ -46,6 +52,15 @@ class SearchViewController: UIViewController, RecipeDisplayProtocol {
         interactor.searchRecipes(query: query)
         searchBar.resignFirstResponder()
         showLoading()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "recipeDetails" {
+            if let detailsViewController = segue.destination as? DetailsViewController, let selectedRow = tableView.indexPathForSelectedRow?.row {
+                let recipe = dataSource[selectedRow]
+                detailsViewController.recipe = recipe
+            }
+        }
     }
     // MARK: - RecipeDisplayProtocol
     func showError(_ error:NetworkError) {

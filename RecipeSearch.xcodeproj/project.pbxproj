@@ -79,6 +79,15 @@
 		5C092A782380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
 		5C092A792380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
 		5C092A7A2380AC34004C94C7 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */; };
+		5C1077E9238200F30036D4C6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077E8238200F30036D4C6 /* DetailsViewController.swift */; };
+		5C1077EA238200F30036D4C6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077E8238200F30036D4C6 /* DetailsViewController.swift */; };
+		5C1077EB238200F30036D4C6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077E8238200F30036D4C6 /* DetailsViewController.swift */; };
+		5C1077F023820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077EF23820F6F0036D4C6 /* InfoTableViewCell.swift */; };
+		5C1077F123820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077EF23820F6F0036D4C6 /* InfoTableViewCell.swift */; };
+		5C1077F223820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077EF23820F6F0036D4C6 /* InfoTableViewCell.swift */; };
+		5C1077F4238211070036D4C6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077F3238211070036D4C6 /* ImageTableViewCell.swift */; };
+		5C1077F5238211070036D4C6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077F3238211070036D4C6 /* ImageTableViewCell.swift */; };
+		5C1077F6238211070036D4C6 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1077F3238211070036D4C6 /* ImageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +143,9 @@
 		5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		5C092A732380A938004C94C7 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		5C1077E8238200F30036D4C6 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		5C1077EF23820F6F0036D4C6 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		5C1077F3238211070036D4C6 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +240,8 @@
 			children = (
 				5C092A1F238041E9004C94C7 /* UIViewController+ErrorHandling.swift */,
 				5C092A772380AC34004C94C7 /* UIViewController+Loading.swift */,
-				5C092902238016EA004C94C7 /* SearchViewController.swift */,
-				5C092A6A2380A248004C94C7 /* Cells */,
+				5C1077EC238209930036D4C6 /* search */,
+				5C1077ED2382099F0036D4C6 /* Details */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +344,33 @@
 			children = (
 				5C092A6B2380A25D004C94C7 /* RecipeTableViewCell.swift */,
 				5C092A6C2380A25D004C94C7 /* RecipeTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5C1077EC238209930036D4C6 /* search */ = {
+			isa = PBXGroup;
+			children = (
+				5C092902238016EA004C94C7 /* SearchViewController.swift */,
+				5C092A6A2380A248004C94C7 /* Cells */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		5C1077ED2382099F0036D4C6 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5C1077E8238200F30036D4C6 /* DetailsViewController.swift */,
+				5C1077EE238209AA0036D4C6 /* Cells */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		5C1077EE238209AA0036D4C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5C1077EF23820F6F0036D4C6 /* InfoTableViewCell.swift */,
+				5C1077F3238211070036D4C6 /* ImageTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -542,6 +581,7 @@
 				5C092A2D23804246004C94C7 /* NetworkManager.swift in Sources */,
 				5C092A07238041D2004C94C7 /* EdamamRequest.swift in Sources */,
 				5C092903238016EA004C94C7 /* SearchViewController.swift in Sources */,
+				5C1077F4238211070036D4C6 /* ImageTableViewCell.swift in Sources */,
 				5C092A6D2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */,
 				5C092A4A238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
 				5C092A63238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
@@ -557,7 +597,9 @@
 				5C092A0A238041D2004C94C7 /* RequestProtocol.swift in Sources */,
 				5C092A67238086F8004C94C7 /* RecipesInteractor.swift in Sources */,
 				5C092A3023804246004C94C7 /* NetworkError.swift in Sources */,
+				5C1077F023820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */,
 				5C092A53238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
+				5C1077E9238200F30036D4C6 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +607,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C1077F5238211070036D4C6 /* ImageTableViewCell.swift in Sources */,
 				5C092A21238041E9004C94C7 /* UIViewController+ErrorHandling.swift in Sources */,
+				5C1077F123820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */,
 				5C092A3123804246004C94C7 /* NetworkError.swift in Sources */,
 				5C092A0B238041D2004C94C7 /* RequestProtocol.swift in Sources */,
 				5C092A2B23804246004C94C7 /* JsonParser.swift in Sources */,
@@ -578,6 +622,7 @@
 				5C092A35238042A3004C94C7 /* NetworkMockingManager.swift in Sources */,
 				5C092A2823804246004C94C7 /* DataProviderProtocol.swift in Sources */,
 				5C092A54238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
+				5C1077EA238200F30036D4C6 /* DetailsViewController.swift in Sources */,
 				5C092A4B238045E2004C94C7 /* UIColor+Custom.swift in Sources */,
 				5C092A64238086E7004C94C7 /* RecipesPresenter.swift in Sources */,
 				5C092A5C23805E3B004C94C7 /* ResponseProtocol.swift in Sources */,
@@ -601,10 +646,13 @@
 				5C092A6123805EF4004C94C7 /* EdamamRecipe.swift in Sources */,
 				5C092A2F23804246004C94C7 /* NetworkManager.swift in Sources */,
 				5C092A5D23805E3B004C94C7 /* ResponseProtocol.swift in Sources */,
+				5C1077F223820F6F0036D4C6 /* InfoTableViewCell.swift in Sources */,
+				5C1077EB238200F30036D4C6 /* DetailsViewController.swift in Sources */,
 				5C092A52238046C1004C94C7 /* EdamamSearchResponse.swift in Sources */,
 				5C092A09238041D2004C94C7 /* EdamamRequest.swift in Sources */,
 				5C092A2923804246004C94C7 /* DataProviderProtocol.swift in Sources */,
 				5C092A55238046C1004C94C7 /* RecipeProtocol.swift in Sources */,
+				5C1077F6238211070036D4C6 /* ImageTableViewCell.swift in Sources */,
 				5C092921238016EC004C94C7 /* RecipeSearchUITests.swift in Sources */,
 				5C092A6F2380A25D004C94C7 /* RecipeTableViewCell.swift in Sources */,
 			);

@@ -61,7 +61,7 @@ class EdamamRequest: BaseRequest {
     //Edamam free APi doesn't allow more than 100 results per query
     class func searchRecipesRequest(query:String, page: Int, size: Int) -> EdamamRequest {
         let from = page * size
-        let to = min((page + 1) * size, 99)
+        let to = min((page + 1) * size, 100)
         return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q": query, "from": from, "to": to])
     }
 }

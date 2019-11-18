@@ -22,7 +22,6 @@ class RecipesInteractor: NSObject, RecipesInteractorProtocol {
     private var dataProvider: DataProvider
     public var hasMore: Bool = false
     private var page: Int = 0
-    private var totalPages: Int?
     private var pageSize: Int?
     private var currentQuery:String?
     
@@ -30,17 +29,24 @@ class RecipesInteractor: NSObject, RecipesInteractorProtocol {
         self.dataProvider = dataProvider
     }
     
+    private func updateData(response: ResponseProtocol?) {
+        self.hasMore = response?.hasMore ?? false
+        self.pageSize = response?.pageSize
+        self.page += 1
+        guard let recipesList = response?.data else {
+            return
+        }
+        self.recipes = recipesList
+    }
+    
     func searchRecipes(query: String) {
         currentQuery = query
         dataProvider.performRequest(request: EdamamRequest.searchRecipesRequest(query: query), of: EdamamSearchResponse.self, completion: { (response) in
             
-            self.hasMore = response?.hasMore ?? false
-            self.totalPages = response?.totalPages
-            self.pageSize = response?.pageSize
+            self.updateData(response: response)
             guard let recipesList = response?.data else {
                 return
             }
-            self.recipes = recipesList
             self.presenter?.presentRecipes(recipesList)
         }) { (error) in
             self.presenter?.presentError(error)
@@ -53,13 +59,10 @@ class RecipesInteractor: NSObject, RecipesInteractorProtocol {
             guard let recipesList = response?.data else {
                 return
             }
-            self.page += 1
-            self.recipes = recipesList
+            self.updateData(response: response)
             self.presenter?.loadMoreRecipes(recipesList)
         }) { (error) in
             self.presenter?.presentError(error)
         }
     }
-    
-    
 }

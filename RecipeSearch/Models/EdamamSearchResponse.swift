@@ -21,7 +21,7 @@ extension EdamamSearchResponse: ResponseProtocol {
     var data: [RecipeProtocol] { get {return self.hits ?? [RecipeProtocol]()}}
     var error: String? {return nil}
     var isSuccess: Bool {return true}
-    var hasMore: Bool {return more && (currentPage + 1) * pageSize <= 100}
+    var hasMore: Bool {return more && (to + pageSize) <= 100}
     var pageSize: Int {return 20}
     //Edamam free account only allow 100 results so I will override here and use the beauty of Protocols
     var totalPages: Int {return 100 / pageSize}

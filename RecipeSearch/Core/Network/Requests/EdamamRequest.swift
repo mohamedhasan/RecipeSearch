@@ -38,6 +38,7 @@ class EdamamRequest: BaseRequest {
     
     private static let APP_ID = "81684560"
     private static let APP_KEY = "e83fcffc992684f40663c1ffd2537ffe"
+    private static let DEFAULT_PAGE_SIZE = 30
     
     required init(path:RequestPathProtocol,paramters:[String:Any]?) {
         super.init(path: path, paramters: paramters)
@@ -54,12 +55,13 @@ class EdamamRequest: BaseRequest {
     }
 
     class func searchRecipesRequest(query:String) -> EdamamRequest {
-        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q":query])
+        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q":query, "to": DEFAULT_PAGE_SIZE])
     }
     
+    //Edamam free APi doesn't allow more than 100 results per query
     class func searchRecipesRequest(query:String, page: Int, size: Int) -> EdamamRequest {
         let from = page * size
-        let to = min((page + 1) * size, 95)
-        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q": query,"from": from, "to": to])
+        let to = min((page + 1) * size, 99)
+        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q": query, "from": from, "to": to])
     }
 }

@@ -15,8 +15,7 @@ struct EdamamRecipe: Codable {
     let source: String!
     let url: String!
     let shareAs: String!
-    let ingredientLines:[String]!
-    let yield:Int!
+    let ingredientLines: [String]!
 }
 
 struct EdamamResult: Codable {

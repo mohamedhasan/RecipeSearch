@@ -108,7 +108,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - SearchBar Methods
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if searchBar.text?.count ?? 0 > 0 {
+        if searchBar.text?.replacingOccurrences(of: " ", with: "").count ?? 0 > 0 {
             let query = searchBar.text!
             searchForRecipe(query)
         }

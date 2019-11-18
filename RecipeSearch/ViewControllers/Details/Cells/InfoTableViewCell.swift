@@ -14,10 +14,9 @@ class InfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        buttonOriginal.layer.borderWidth = 2
-        buttonInstructions.layer.borderWidth = 2
-        
-        buttonOriginal.layer.borderColor = UIColor.black.cgColor
-        buttonInstructions.layer.borderColor = UIColor.black.cgColor
+        buttonOriginal.layer.borderWidth = 1
+        buttonInstructions.layer.borderWidth = 1
+        buttonOriginal.layer.borderColor = UIColor.darkGray.cgColor
+        buttonInstructions.layer.borderColor = UIColor.darkGray.cgColor
     }
 }

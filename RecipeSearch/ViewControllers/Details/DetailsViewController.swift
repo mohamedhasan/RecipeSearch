@@ -11,11 +11,14 @@ import UIKit
 class DetailsViewController: UITableViewController {
     var recipe:RecipeProtocol?
     var dataSource:[(cellIdentifier: String, count: Int, headerTitle: String?)] { get {
-        return [
+        var sections = [
             (cellIdentifier: "imageCell", count: 1, headerTitle: nil),
-            (cellIdentifier: "ingredientCell", count: self.recipe?.ingredients?.count ?? 0, headerTitle: "INGREDIENTS"),
-            (cellIdentifier: "infoCell", count: 1, headerTitle: "INFO")
-        ]}}
+            (cellIdentifier: "infoCell", count: 1, headerTitle: "INFO")]
+        if self.recipe?.ingredients?.count ?? 0 > 0 {
+         sections.insert((cellIdentifier: "ingredientCell", count: self.recipe?.ingredients?.count ?? 0, headerTitle: "INGREDIENTS"), at: 1)
+        }
+        return sections
+        }}
     @IBOutlet weak var labelPublisher: UILabel!
     @IBOutlet weak var labelSocialRank: UILabel!
     
@@ -28,9 +31,13 @@ class DetailsViewController: UITableViewController {
         setup()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     private func setup() {
         navigationItem.title = recipe?.title
-        labelPublisher.text = "Source :" + (recipe?.publisherName ?? "")
+        labelPublisher.text = "Source: " + (recipe?.publisherName ?? "")
         labelSocialRank.text = "Views: \(recipe?.socialRank ?? 0)"
     }
     
@@ -51,23 +58,33 @@ class DetailsViewController: UITableViewController {
         return dataSource[section].count
     }
     
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let header = view as? UITableViewHeaderFooterView {
+            header.textLabel?.font = UIFont.boldSystemFont(ofSize: 22.0)
+            header.textLabel?.textColor = UIColor.black
+            header.textLabel?.text = dataSource[section].headerTitle
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return dataSource[section].headerTitle
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: dataSource[indexPath.section].cellIdentifier)
-        switch indexPath.section {
-        case 0:
+        let identifier = dataSource[indexPath.section].cellIdentifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+        switch identifier {
+        case "imageCell":
             guard let imageCell = cell as? ImageTableViewCell else {
                 return cell!
             }
             imageCell.loadImage(url: recipe?.imageUrl ?? "")
             return imageCell
-        case 1:
+        case "ingredientCell":
+            cell?.textLabel?.textColor = .darkGray
             cell?.textLabel?.text = recipe?.ingredients?[indexPath.row] ?? ""
         return cell!
-        case 2:
+        case "infoCell":
             guard let infoCell = cell as? InfoTableViewCell else {
                 return cell!
             }

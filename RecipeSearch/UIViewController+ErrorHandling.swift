@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIViewController {
-
     func presentError(_ error:NetworkError) {
         let title = NSLocalizedString("Error", comment: "")
         let message = error.localizedDescription
@@ -18,5 +17,4 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }

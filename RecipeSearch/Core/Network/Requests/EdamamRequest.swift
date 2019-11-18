@@ -43,19 +43,19 @@ class EdamamRequest: BaseRequest {
     required init(path:RequestPathProtocol,paramters:[String:Any]?) {
         super.init(path: path, paramters: paramters)
         
-        let authParams:[String:Any] = ["app_id":EdamamRequest.APP_ID,
-                                       "app_key":EdamamRequest.APP_KEY]
+        let authParams:[String:Any] = ["app_id": EdamamRequest.APP_ID,
+                                       "app_key": EdamamRequest.APP_KEY]
         let allParamters = authParams.merging(paramters ?? [:]) { (key, value) -> Any in
             return value
         }
         self.baseURL = "https://api.edamam.com"
-        self.headers = ["Content-Type" : "application/json"]
+        self.headers = ["Content-Type": "application/json"]
         self.paramters = allParamters
         self.path = path
     }
 
     class func searchRecipesRequest(query:String) -> EdamamRequest {
-        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q":query, "to": DEFAULT_PAGE_SIZE])
+        return EdamamRequest(path: EdamamRequestPath.search, paramters: ["q": query, "to": DEFAULT_PAGE_SIZE])
     }
     
     //Edamam free APi doesn't allow more than 100 results per query

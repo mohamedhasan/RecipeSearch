@@ -14,6 +14,7 @@ protocol RecipeDisplayProtocol: class {
 }
 
 class SearchViewController: UIViewController, RecipeDisplayProtocol {
+    var collapseDetailViewController: Bool = true
     
     private let interactor = RecipesInteractor(dataProvider: NetworkManager.sharedInstance)
     internal var dataSource = [RecipeProtocol]()
@@ -34,10 +35,12 @@ class SearchViewController: UIViewController, RecipeDisplayProtocol {
     }
     
     func setup() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.titleView = UIImageView(image: UIImage(named: "logo"))
         let presenter = RecipesPresenter()
         presenter.viewController = self
         interactor.presenter = presenter
+        searchBar.becomeFirstResponder()
     }
 
     func loadmore() {
@@ -56,7 +59,7 @@ class SearchViewController: UIViewController, RecipeDisplayProtocol {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "recipeDetails" {
-            if let detailsViewController = segue.destination as? DetailsViewController, let selectedRow = tableView.indexPathForSelectedRow?.row {
+            if let navigationController = segue.destination as? UINavigationController, let detailsViewController = navigationController.viewControllers.first as? DetailsViewController, let selectedRow = tableView.indexPathForSelectedRow?.row {
                 let recipe = dataSource[selectedRow]
                 detailsViewController.recipe = recipe
             }
@@ -90,6 +93,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipeTableViewCell.cellIdentifier) as? RecipeTableViewCell
         cell?.showRecipe(recipe)
       return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.collapseDetailViewController = false
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
